@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('projects', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger("type_id")->nullable();
+            $table->foreign("type_id")->references("id")->on("types")->nullOnDelete();
             $table->string("name",20)->nullable();
             $table->string("title",50);
             $table->string("email",100)->nullable();
