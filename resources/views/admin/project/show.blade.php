@@ -9,13 +9,17 @@
                 {{ $project['title'] }}
             </h2>
             <div>
-              linguaggio utilizzato: {{$project["language"]}}
+                linguaggio utilizzato: {{ $project['language'] }}
             </div>
             <div>
-              frameworks utilizzati:{{$project["frameworks"]}}
+                frameworks utilizzati:{{ $project['frameworks'] }}
             </div>
-            descrizione:{{ $project['description'] }}
-    
+            <div>descrizione:{{ $project['description'] }}
+            </div>
+            <div>
+                tipo: {{$project->type->title}}
+            </div>
+
         </div>
     </main>
 @endsection
